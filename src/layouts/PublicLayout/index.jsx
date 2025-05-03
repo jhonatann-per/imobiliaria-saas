@@ -7,7 +7,6 @@ export const PublicLayout = () => {
       <Header />
       <Outlet /> 
       
-      <footer>Rodapé do site</footer>
     </Container>
   )
 }

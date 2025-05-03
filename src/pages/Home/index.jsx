@@ -1,17 +1,23 @@
-import { Container, Banner, ImoveisSection } from "./styles";
+import { Container } from "./styles";
 import { Search } from "../../components/Search"
 import { BannerApresentation } from "../../components/BannerApresentation";
+import { ImoveisList } from "../../components/ImoveisList";
+import { useState } from "react";
+
 export const Home = () => {
+    const [searchText, setSearchText] = useState("");
+    const [selectedState, setSelectedState] = useState("");
+
     return (
         <Container>
             <BannerApresentation />
-            <Search />
-            <ImoveisSection>
-                <div>
-                    <h1>Imóveis em Destaque</h1>
-                    <p>Confira nossas melhores opções de imóveis disponíveis</p>
-                </div>
-            </ImoveisSection>
+            <Search
+                searchText={searchText}
+                setSearchText={setSearchText}
+                selectedState={selectedState}
+                setSelectedState={setSelectedState}
+            />
+            <ImoveisList searchText={searchText} selectedState={selectedState} />
         </Container>
     )
 };

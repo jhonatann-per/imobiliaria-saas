@@ -1,12 +1,35 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  height: 134px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  position: relative;
+  top: -30px;  
+  
+  p{
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #000;
+    font-weight: 500;
+  }
+`;
+
+
+export const ContainerSearch = styled.div`
     display: flex;
-    width: 90%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    background-color: white;
 `;
 
 export const Input = styled.input`
@@ -14,19 +37,34 @@ export const Input = styled.input`
   border: 1px solid #ccc;
   border-radius: 8px;
   flex: 1;
+  height: auto;
+  font-size: 16px;
+  font-weight: 500;
 `;
 
 export const Select = styled.select`
-  padding: 8px 12px;
+  padding: 0.85rem;
   border: 1px solid #ccc;
   border-radius: 8px;
+  height: auto; 
+  font-size: 16px;
+  font-weight: 500;
 `;
 
 export const Button = styled.button`
-  padding: 8px 20px;
-  background-color: #2563EB;
-  color: #fff;
+  width: 8.1rem;
   border: none;
-  border-radius: 8px;
+  padding: 1rem;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 6px;
+  transition: background-color 0.2s ease-in-out;
   cursor: pointer;
+  height: auto; 
+  font-size: 16px;
+  font-weight: 500;
+
+  &:hover {
+    background-color: #1d4ed8;
+  }
 `;

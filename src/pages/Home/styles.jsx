@@ -1,32 +1,19 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    display: flex;
-    
-    color: white;
-    flex-direction: column;
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  
+  @media screen and (max-width: 1320px) {
+    width: 1280px;
+  }
+
+  @media screen and (max-width: 450px) {
+    margin-top: 0;
+    padding: 0;
+  }
 `;
-
-export const Banner = styled.section`
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    background-color:#0F276C;
-    height: 412px;
-    margin: 0 auto;
-    padding: 4rem;
-    gap: 2rem;
-
-    button{
-        width: 10rem;
-        padding: 1rem;
-    }
-`;
-
-export const ImoveisSection = styled.section`
-    width: 100%
-
-`;
-
