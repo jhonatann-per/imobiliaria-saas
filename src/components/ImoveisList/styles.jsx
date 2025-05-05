@@ -7,7 +7,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    height: 394px;
+    margin-bottom: 4rem;
 
     section{
         display: flex;
@@ -15,7 +15,7 @@ export const Container = styled.div`
         align-items: center;
         justify-content: center;
         gap: 1rem;
-        margin-top: 12rem;
+        margin-top: 5rem;
         margin-bottom: 0.5rem;
         
         h1{
@@ -38,7 +38,6 @@ export const CardContainer = styled.div`
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     border-radius: 6px;
     max-width: 500px;
-
     img{
         width: 100%;
         height: 192px;
@@ -69,11 +68,26 @@ export const CardContainer = styled.div`
         cursor: pointer;
         height: auto; 
         margin-top: 10px;
-
+        font-size: 16px;
         &:hover {
             background-color: #1d4ed8;
     }
     }
 `;
 
-export const ButtonImoveis = styled.div``;
+export const ButtonImoveis = styled.div`
+    width: 12.25rem;
+    border: none;
+    padding: 1rem;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 6px;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+    height: auto; 
+    margin-top: 1rem;
+  
+    &:hover {
+        background-color: #1d4ed8;
+    }
+`;

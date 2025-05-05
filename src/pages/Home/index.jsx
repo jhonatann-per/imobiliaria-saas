@@ -3,6 +3,7 @@ import { Search } from "../../components/Search"
 import { BannerApresentation } from "../../components/BannerApresentation";
 import { ImoveisList } from "../../components/ImoveisList";
 import { useState } from "react";
+import { Solutions } from "../../components/Solutions";
 
 export const Home = () => {
     const [searchText, setSearchText] = useState("");
@@ -18,6 +19,7 @@ export const Home = () => {
                 setSelectedState={setSelectedState}
             />
             <ImoveisList searchText={searchText} selectedState={selectedState} />
+            <Solutions />
         </Container>
     )
 };

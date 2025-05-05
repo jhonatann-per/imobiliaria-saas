@@ -10,13 +10,13 @@ export const ImoveisList = ({ searchText, selectedState }) => {
       try {
         const response = await fetch("http://localhost:3001/imoveis");
         if (!response.ok) {
-          throw new Error("Erro ao buscar imóveis");
+          throw new Error("Nenhum imóvel encontrado.");
         }
         const data = await response.json();
         setImoveis(data);
       } catch (err) {
         setError(err.message);
-        console.error("Erro ao buscar Imóveis", err);
+        console.error("Nenhum imóvel encontrado.", err);
       }
     };
     fetchImoveis();
@@ -32,29 +32,31 @@ export const ImoveisList = ({ searchText, selectedState }) => {
   return (
     <Container className="imoveis-list">
 
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      
+      {error ? (<p style={{ color: "red" }}>{error}</p>) : (
+        <>
+        <section>
+          <h1>Imóveis em Destaque</h1>
+          <p>Confira nossas melhores opções de Imóveis disponíveis</p>
+        </section>
+         <Card>
+          {imoveisFiltrados.map((imovel) => (
+            <CardContainer key={imovel.id} className="card">
+              <img src={imovel.imageUrl} alt={imovel.name} />
+              <div>
+                <h3>{imovel.name}</h3>
+                <p>R$ {imovel.price}</p>
+                <p>{imovel.location}</p>
+                <button>Ver Detalhes</button>
+              </div>
+            </CardContainer>
+            ))}
+          </Card>
+       <ButtonImoveis>Ver Todos os Imóveis</ButtonImoveis>
+       </>
+    )}
       {imoveisFiltrados.length === 0 && !error && (
         <p style={{ color: "gray" }}>Nenhum imóvel encontrado.</p>
       )}
-      <section>
-        <h1>Imóveis em Destaque</h1>
-        <p>Confira nossas melhores opções de Imóveis disponíveis</p>
-      </section>
-      <Card>
-        {imoveisFiltrados.map((imovel) => (
-          <CardContainer key={imovel.id} className="card">
-            <img src={imovel.imageUrl} alt={imovel.name} />
-            <div>
-              <h3>{imovel.name}</h3>
-              <p>R$ {imovel.price}</p>
-              <p>{imovel.location}</p>
-              <button>Ver Detalhes</button>
-            </div>
-          </CardContainer>
-        ))}
-      </Card>
-      <ButtonImoveis>Ver Todos os Imóveis</ButtonImoveis>
       
     </Container>
   );
