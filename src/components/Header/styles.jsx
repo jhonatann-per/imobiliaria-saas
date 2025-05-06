@@ -58,7 +58,7 @@ export const ButtonWhite = styled.button`
 export const ButtonBlue = styled.button`
     width: auto;
     border: none;
-    padding: 0.75rem;
+    padding: 0.9rem;
     background-color: #2563eb;
     color: white;
     border-radius: 6px;
@@ -66,7 +66,6 @@ export const ButtonBlue = styled.button`
     cursor: pointer;
     height: auto; 
     font-size: 16px;
-    font-weight: 500;
     margin-top: 10px;
 
     &:hover {

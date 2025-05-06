@@ -71,7 +71,7 @@ export const CardContainer = styled.div`
         font-size: 16px;
         &:hover {
             background-color: #1d4ed8;
-    }
+        }
     }
 `;
 

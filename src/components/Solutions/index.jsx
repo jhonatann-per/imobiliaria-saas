@@ -1,4 +1,4 @@
-import { Container, ContainerServices, Content } from "./styles";
+import { Container, ContainerServices, Content, ContainerInvitation } from "./styles";
 import { CreditCard, MapPin, HomeIcon } from "lucide-react";
 
 const Services = [
@@ -41,6 +41,12 @@ export const Solutions = () => {
           ))}
         </Content>
       </ContainerServices>
+
+      <ContainerInvitation>
+        <h1>Pronto para encontrar seu imóvel?</h1>
+        <p>Entre em contato com nossa equipe e descubra como podemos te ajudar a  <br/> encontrar o imóvel perfeito.</p>
+        <button>Fale conosco</button>
+      </ContainerInvitation>
     </Container>
   );
 };

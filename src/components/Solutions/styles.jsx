@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 100%;
   flex-direction: column;
   gap: 2rem;
 
@@ -16,6 +16,7 @@ export const Container = styled.div`
     gap: 1rem;
     margin-top: 5rem;
     margin-bottom: 2rem;
+    width: 80%;
 
     h1 {
       font-size: 30px;
@@ -28,7 +29,7 @@ export const ContainerServices = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 80%;
 `;
 
 export const Content = styled.div`
@@ -43,7 +44,7 @@ export const Content = styled.div`
   div {
     background-color: #F9FAFB;
     flex: 1;
-    max-width: 394px;
+    width: 394px;
     padding: 1rem;
     display: flex;
     gap: 1rem;
@@ -57,4 +58,48 @@ export const Content = styled.div`
   p{
     width: 300px;
   }
+
+  @media (max-width: 1360px) {
+    div {
+      width:30%; 
+    }
+  }
+`;
+
+export const ContainerInvitation = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 5rem;
+    
+    color: white;
+    background-color: #2563eb;
+    width: 100%;
+    height: 316px;
+    text-align: center;
+    gap: 1.5rem;
+
+    h1 {
+      font-size: 30px;
+      color: white;
+    }
+
+      button{
+        width: auto;
+        border: none;
+        padding: 1rem;
+        background-color: #ffffff;
+        color: #2563eb;
+        border-radius: 6px;
+        transition: background-color 0.2s ease-in-out;
+        cursor: pointer;
+        height: auto; 
+        margin-top: 10px;
+        font-size: 16px;
+        &:hover {
+            background-color: #dbdee7;
+        }
+    }
 `;
