@@ -8,12 +8,5 @@ export const Container = styled.div`
   width: 100%;
   margin: 0 auto;
   
-  @media screen and (max-width: 1320px) {
-    width: 1280px;
-  }
 
-  @media screen and (max-width: 450px) {
-    margin-top: 0;
-    padding: 0;
-  }
 `;

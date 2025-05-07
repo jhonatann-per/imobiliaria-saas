@@ -9,6 +9,11 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Inter', sans-serif;
   }
 
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
   body {
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
     background-color: #fff;

@@ -16,6 +16,12 @@ export const Content = styled.div`
   flex-wrap: wrap;
   width: 80%;
   margin-bottom: 2rem;
+
+  @media (max-width: 450px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
 `;
 
 export const Column = styled.div`
@@ -47,6 +53,12 @@ export const Column = styled.div`
   p {
     color: #cbd5e1;
     font-size: 14px;
+  }
+
+  @media (max-width: 450px) {
+    align-items: center;
+    text-align: center;
+    min-width: unset;
   }
 `;
 
