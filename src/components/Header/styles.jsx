@@ -26,11 +26,21 @@ export const Container = styled.div`
     font-size: 20px;
   }
 
+  .menu-desktop {
+    display: flex;
+    gap: 12px;
+  }
+
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+  }
+
   @media (max-width: 768px) {
-    flex-direction: column;
+    flex-direction: row;
     height: auto;
     gap: 0.8rem;
-    padding: 0.8rem 0;
+    padding: 1.5rem 0;
 
     section {
       flex-wrap: wrap;
@@ -46,13 +56,21 @@ export const Container = styled.div`
     width: 90%;
 
     section {
-      flex-direction: column;
+      flex-direction: row;
       gap: 0.5rem;
     }
 
     strong {
-      font-size: 17px;
+      font-size: 20px;
       text-align: center;
+    }
+
+    .menu-desktop {
+      display: none;
+    }
+
+    .menu-icon {
+      display: block;
     }
   }
 `;
@@ -121,6 +139,7 @@ export const ButtonBlue = styled.button`
   @media (max-width: 768px) {
     padding: 0.7rem;
     font-size: 15px;
+    display: none;
   }
 
   @media (max-width: 450px) {
@@ -128,4 +147,47 @@ export const ButtonBlue = styled.button`
     padding: 0.8rem;
     font-size: 14px;
   }
+`;
+
+export const SlideMenu = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 100;
+  animation: slideIn 0.3s ease forwards;
+
+  .menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    color: #2563eb;
+  }
+
+  @keyframes slideIn {
+    from {
+      right: -300px;
+    }
+    to {
+      right: 0;
+    }
+  }
+`;
+
+export const Overlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+  z-index: 90;
 `;

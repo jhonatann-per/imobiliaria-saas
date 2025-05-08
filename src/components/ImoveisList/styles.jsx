@@ -27,6 +27,14 @@ export const Container = styled.div`
 
   @media (max-width: 450px) {
     width: 90%;
+    
+    section{
+      text-align: center;
+      margin-top: 4rem;
+      p{
+        line-height: 1.5rem;
+      }
+    }
   }
 `;
 
@@ -36,7 +44,6 @@ export const Card = styled.div`
   gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
-
   @media (max-width: 450px) {
     display: none; 
   }
@@ -46,11 +53,11 @@ export const MobileSlider = styled.div`
   display: none;
   width: 100%;
   max-width: 500px;
-  padding: 0 10px;
+  box-shadow: 0 4px 8px rgba(189, 183, 183, 0.5);
 
-  .slick-slide {
+  /* .slick-slide {
     padding: 0 10px;
-  }
+  } */
 
   .slick-dots {
     bottom: -25px;
@@ -69,8 +76,8 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(189, 183, 183, 0.5);
+  border-radius: 10px;
   max-width: 500px;
   flex: 1;
   margin: 0 auto;
@@ -133,6 +140,7 @@ export const CardContainer = styled.div`
       width: 100%;
       padding: 0.9rem;
       font-size: 15px;
+      font-weight: 400;
     }
   }
 `;
@@ -156,6 +164,7 @@ export const ButtonImoveis = styled.div`
   }
 
   @media (max-width: 450px) {
-    width: 100%;
+    width: 80%;
+    
   }
 `;

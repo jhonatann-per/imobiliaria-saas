@@ -16,6 +16,12 @@ export const Banner = styled.section`
     margin: 0 auto;
     gap: 2rem;
 
+    div{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 70%;
+    }
     button{
         width: 8.1rem;
         border: none;
@@ -39,4 +45,21 @@ export const Banner = styled.section`
     p{
         font-size: 20px;
     }
+
+    @media (max-width: 450px) {
+    width: 90%;
+    height: 430px;
+
+    div{ 
+        width: auto;
+    }
+
+    h1{
+        font-size: 2.25rem;
+    }
+    p{
+        font-weight: 300;
+        line-height: 1.75rem;
+    }
+  }
 `;
